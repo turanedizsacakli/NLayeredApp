@@ -1,0 +1,15 @@
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Business.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Nothwind.DataAccess.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Nothwind.DataAccess.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Nothwind.DataAccess.dll.config
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\EntityFramework.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.AssemblyReference.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.CoreCompileInputs.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.csproj.CopyComplete
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\obj\Debug\Northwind.Business.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Business\bin\Debug\Northwind.Entities.dll.config

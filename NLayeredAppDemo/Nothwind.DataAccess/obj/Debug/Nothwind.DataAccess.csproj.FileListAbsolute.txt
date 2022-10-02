@@ -1,0 +1,15 @@
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Nothwind.DataAccess.dll.config
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Nothwind.DataAccess.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Nothwind.DataAccess.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\EntityFramework.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Northwind.Entities.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Northwind.Entities.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\EntityFramework.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\obj\Debug\Nothwind.DataAccess.csproj.AssemblyReference.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\obj\Debug\Nothwind.DataAccess.csproj.CoreCompileInputs.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\obj\Debug\Nothwind.DataAccess.csproj.CopyComplete
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\obj\Debug\Nothwind.DataAccess.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\obj\Debug\Nothwind.DataAccess.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Nothwind.DataAccess\bin\Debug\Northwind.Entities.dll.config
