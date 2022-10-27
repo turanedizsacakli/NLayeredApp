@@ -21,7 +21,7 @@ namespace Northwind.WebFormsUI
         {
             InitializeComponent();
 
-            _productService = new ProductManager(new NhProductDal());
+            _productService = new ProductManager(new EfProductDal());
 
         }
 

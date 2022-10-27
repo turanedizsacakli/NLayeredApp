@@ -10,3 +10,15 @@ D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Entities\bin\Debug\Ent
 D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.xml
 D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.SqlServer.xml
 D:\myRepo\CsharpNLayeredProject\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CopyComplete
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.dll.config
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.AssemblyReference.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CopyComplete
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.Entities\obj\Debug\Northwind.Entities.pdb

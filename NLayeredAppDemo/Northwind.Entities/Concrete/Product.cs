@@ -13,6 +13,6 @@ namespace Northwind.Entities.Concrete
         public int CategoryId { get; set; }
         public decimal UnitPrice { get; set; }
         public string QuantityPerUnit { get; set; }
-        //public int UnitInStock { get; set; }
+
     }
 }
