@@ -2,6 +2,7 @@
 using Nothwind.DataAccess.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Nothwind.DataAccess.Concrete.NhProductDal
 {
@@ -17,13 +18,15 @@ namespace Nothwind.DataAccess.Concrete.NhProductDal
             throw new NotImplementedException();
         }
 
-        public Product Get(int id)
+
+
+        public Product Get(Expression<Func<Product, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
 
-        public List<Product> GetAll()
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             List<Product> products = new List<Product>
             {

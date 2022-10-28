@@ -1,17 +1,15 @@
 ﻿using Northwind.Entities.Concrete;
+using Nothwind.DataAccess.Abstract;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Nothwind.DataAccess.Concrete.EntityFramework
 {
-    public class NorthwindContext : DbContext
+    public class EfCategoryDal : EfEntityRepositoryBase<Category, NorthwindContext>
     {
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Category> Categories { get; set; }
 
     }
 }
