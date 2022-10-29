@@ -17,12 +17,33 @@ namespace Northwind.Business.Concrete
             _productDal = productDal;
         }
 
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
+
+        public void Delete(Product product)
+        {
+            _productDal.Delete(product);
+        }
+
         public List<Product> GetAll()
         {
             // Business codes
             
             return _productDal.GetAll();
 
+        }
+
+        public List<Product> GetProductsByCategory(int categoryId)
+        {
+            return _productDal.GetAll(p => p.CategoryId == categoryId);
+
+        }
+
+        public List<Product> GetProductsByProductName(string prouctName)
+        {
+            return _productDal.GetAll(p=>p.ProductName.ToLower().Contains(prouctName.ToLower()));     
         }
     }
 }

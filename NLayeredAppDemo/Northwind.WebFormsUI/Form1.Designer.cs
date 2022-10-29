@@ -41,16 +41,20 @@
             this.gbxAdd = new System.Windows.Forms.GroupBox();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.tbxStockAmount = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblStockAmount = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.GetById = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbxQuantityPerUnit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxCategoryId = new System.Windows.Forms.TextBox();
+            this.lblCategoryId = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
@@ -76,9 +80,12 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // gbxUpdate
             // 
+            this.gbxUpdate.Controls.Add(this.textBox1);
+            this.gbxUpdate.Controls.Add(this.label6);
             this.gbxUpdate.Controls.Add(this.tbxUpdateUnitPrice);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
             this.gbxUpdate.Controls.Add(this.tbxUpdateStockAmount);
@@ -97,7 +104,7 @@
             // 
             // tbxUpdateUnitPrice
             // 
-            this.tbxUpdateUnitPrice.Location = new System.Drawing.Point(189, 66);
+            this.tbxUpdateUnitPrice.Location = new System.Drawing.Point(189, 56);
             this.tbxUpdateUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateUnitPrice.Name = "tbxUpdateUnitPrice";
             this.tbxUpdateUnitPrice.Size = new System.Drawing.Size(133, 22);
@@ -116,7 +123,7 @@
             // 
             // tbxUpdateStockAmount
             // 
-            this.tbxUpdateStockAmount.Location = new System.Drawing.Point(189, 112);
+            this.tbxUpdateStockAmount.Location = new System.Drawing.Point(189, 86);
             this.tbxUpdateStockAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateStockAmount.Name = "tbxUpdateStockAmount";
             this.tbxUpdateStockAmount.Size = new System.Drawing.Size(133, 22);
@@ -125,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 25);
+            this.label1.Location = new System.Drawing.Point(81, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 2;
@@ -134,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 118);
+            this.label2.Location = new System.Drawing.Point(81, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 6;
@@ -142,7 +149,7 @@
             // 
             // tbxUpdateName
             // 
-            this.tbxUpdateName.Location = new System.Drawing.Point(189, 22);
+            this.tbxUpdateName.Location = new System.Drawing.Point(189, 28);
             this.tbxUpdateName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateName.Name = "tbxUpdateName";
             this.tbxUpdateName.Size = new System.Drawing.Size(133, 22);
@@ -151,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 71);
+            this.label3.Location = new System.Drawing.Point(81, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 4;
@@ -159,11 +166,13 @@
             // 
             // gbxAdd
             // 
+            this.gbxAdd.Controls.Add(this.tbxCategoryId);
+            this.gbxAdd.Controls.Add(this.lblCategoryId);
+            this.gbxAdd.Controls.Add(this.tbxQuantityPerUnit);
+            this.gbxAdd.Controls.Add(this.label5);
             this.gbxAdd.Controls.Add(this.tbxUnitPrice);
             this.gbxAdd.Controls.Add(this.btnAdd);
-            this.gbxAdd.Controls.Add(this.tbxStockAmount);
             this.gbxAdd.Controls.Add(this.lblName);
-            this.gbxAdd.Controls.Add(this.lblStockAmount);
             this.gbxAdd.Controls.Add(this.tbxName);
             this.gbxAdd.Controls.Add(this.lblUnitPrice);
             this.gbxAdd.Location = new System.Drawing.Point(10, 300);
@@ -177,7 +186,7 @@
             // 
             // tbxUnitPrice
             // 
-            this.tbxUnitPrice.Location = new System.Drawing.Point(189, 66);
+            this.tbxUnitPrice.Location = new System.Drawing.Point(188, 61);
             this.tbxUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUnitPrice.Name = "tbxUnitPrice";
             this.tbxUnitPrice.Size = new System.Drawing.Size(133, 22);
@@ -192,36 +201,20 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // tbxStockAmount
-            // 
-            this.tbxStockAmount.Location = new System.Drawing.Point(189, 112);
-            this.tbxStockAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxStockAmount.Name = "tbxStockAmount";
-            this.tbxStockAmount.Size = new System.Drawing.Size(133, 22);
-            this.tbxStockAmount.TabIndex = 7;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(81, 25);
+            this.lblName.Location = new System.Drawing.Point(80, 28);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(53, 16);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name : ";
             // 
-            // lblStockAmount
-            // 
-            this.lblStockAmount.AutoSize = true;
-            this.lblStockAmount.Location = new System.Drawing.Point(81, 118);
-            this.lblStockAmount.Name = "lblStockAmount";
-            this.lblStockAmount.Size = new System.Drawing.Size(98, 16);
-            this.lblStockAmount.TabIndex = 6;
-            this.lblStockAmount.Text = "Stock Amount : ";
-            // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(189, 22);
+            this.tbxName.Location = new System.Drawing.Point(188, 25);
             this.tbxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(133, 22);
@@ -230,7 +223,7 @@
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(81, 71);
+            this.lblUnitPrice.Location = new System.Drawing.Point(80, 66);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.Size = new System.Drawing.Size(70, 16);
             this.lblUnitPrice.TabIndex = 4;
@@ -238,7 +231,7 @@
             // 
             // GetById
             // 
-            this.GetById.Location = new System.Drawing.Point(12, 11);
+            this.GetById.Location = new System.Drawing.Point(10, 42);
             this.GetById.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GetById.Name = "GetById";
             this.GetById.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -250,7 +243,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(549, 20);
+            this.lblSearch.Location = new System.Drawing.Point(590, 51);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(59, 16);
             this.lblSearch.TabIndex = 19;
@@ -258,28 +251,81 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(657, 16);
+            this.tbxSearch.Location = new System.Drawing.Point(655, 47);
             this.tbxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(379, 22);
             this.tbxSearch.TabIndex = 18;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
-            // comboBox1
+            // cbxCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(77, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(255, 24);
-            this.comboBox1.TabIndex = 21;
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(259, 48);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(255, 24);
+            this.cbxCategory.TabIndex = 21;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 71);
+            this.label4.Location = new System.Drawing.Point(184, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Search : ";
+            this.label4.Text = "Products : ";
+            // 
+            // tbxQuantityPerUnit
+            // 
+            this.tbxQuantityPerUnit.Location = new System.Drawing.Point(189, 92);
+            this.tbxQuantityPerUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxQuantityPerUnit.Name = "tbxQuantityPerUnit";
+            this.tbxQuantityPerUnit.Size = new System.Drawing.Size(133, 22);
+            this.tbxQuantityPerUnit.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(81, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "QuantityPerUnit : ";
+            // 
+            // tbxCategoryId
+            // 
+            this.tbxCategoryId.Location = new System.Drawing.Point(188, 126);
+            this.tbxCategoryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxCategoryId.Name = "tbxCategoryId";
+            this.tbxCategoryId.Size = new System.Drawing.Size(133, 22);
+            this.tbxCategoryId.TabIndex = 11;
+            // 
+            // lblCategoryId
+            // 
+            this.lblCategoryId.AutoSize = true;
+            this.lblCategoryId.Location = new System.Drawing.Point(80, 132);
+            this.lblCategoryId.Name = "lblCategoryId";
+            this.lblCategoryId.Size = new System.Drawing.Size(85, 16);
+            this.lblCategoryId.TabIndex = 10;
+            this.lblCategoryId.Text = "Category Id : ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(189, 120);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 22);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(81, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Stock Amount : ";
             // 
             // Form1
             // 
@@ -287,7 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 551);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.GetById);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbxSearch);
@@ -323,16 +369,20 @@
         private System.Windows.Forms.GroupBox gbxAdd;
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox tbxStockAmount;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblStockAmount;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.Button GetById;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbxCategoryId;
+        private System.Windows.Forms.Label lblCategoryId;
+        private System.Windows.Forms.TextBox tbxQuantityPerUnit;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
