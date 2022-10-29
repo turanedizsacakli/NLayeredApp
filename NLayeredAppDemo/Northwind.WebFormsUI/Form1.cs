@@ -27,14 +27,10 @@ namespace Northwind.WebFormsUI
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+ 
         private IProductService _productService;
         private ICategoryService _categoryService;
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadProducts();
@@ -58,13 +54,13 @@ namespace Northwind.WebFormsUI
         {
             try
             {
-            dgwProduct.DataSource = _productService.GetProductsByCategory(Convert.ToInt32(cbxCategory.SelectedValue));
+                dgwProduct.DataSource = _productService.GetProductsByCategory(Convert.ToInt32(cbxCategory.SelectedValue));
             }
             catch
             {
 
             }
-                       
+
         }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
@@ -77,7 +73,7 @@ namespace Northwind.WebFormsUI
             {
                 LoadProducts();
             }
-            
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -85,10 +81,10 @@ namespace Northwind.WebFormsUI
             _productService.Add(new Product
             {
                 ProductName = tbxName.Text,
-                UnitPrice = Convert.ToDecimal( tbxUnitPrice.Text),
+                UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
                 CategoryId = Convert.ToInt32(tbxCategoryId.Text),
-                QuantityPerUnit=tbxQuantityPerUnit.Text,
-                
+                QuantityPerUnit = tbxQuantityPerUnit.Text,
+
             });
             MessageBox.Show(" Product is added... ");
             LoadProducts();
@@ -104,10 +100,36 @@ namespace Northwind.WebFormsUI
         {
             _productService.Delete(new Product
             {
-                Id = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value)
+                ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value)
             });
             MessageBox.Show("Product deleted...");
             LoadProducts();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            _productService.Update(new Product
+            {
+                ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value),
+                ProductName = tbxUpdateName.Text,
+                CategoryId = Convert.ToInt32(tbxUpdateCategoryId.Text),
+                UnitPrice = Convert.ToDecimal(tbxUpdateUnitPrice.Text),
+                QuantityPerUnit = tbxUpdateQuantityPerUnit.Text
+
+            });
+
+            MessageBox.Show("Product updated...");
+            LoadProducts();
+
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbxUpdateName.Text = dgwProduct.CurrentRow.Cells[1].Value.ToString();
+            tbxUpdateCategoryId.Text = dgwProduct.CurrentRow.Cells[2].Value.ToString();
+            tbxUpdateUnitPrice.Text = dgwProduct.CurrentRow.Cells[3].Value.ToString();
+            tbxUpdateQuantityPerUnit.Text = dgwProduct.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

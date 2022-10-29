@@ -31,14 +31,20 @@
             this.dgwProduct = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxUpdateCategoryId = new System.Windows.Forms.TextBox();
             this.tbxUpdateUnitPrice = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.tbxUpdateStockAmount = new System.Windows.Forms.TextBox();
+            this.tbxUpdateQuantityPerUnit = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tbxUpdateName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbxAdd = new System.Windows.Forms.GroupBox();
+            this.tbxCategoryId = new System.Windows.Forms.TextBox();
+            this.lblCategoryId = new System.Windows.Forms.Label();
+            this.tbxQuantityPerUnit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -49,12 +55,6 @@
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbxQuantityPerUnit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbxCategoryId = new System.Windows.Forms.TextBox();
-            this.lblCategoryId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
@@ -69,7 +69,7 @@
             this.dgwProduct.RowTemplate.Height = 24;
             this.dgwProduct.Size = new System.Drawing.Size(1026, 155);
             this.dgwProduct.TabIndex = 0;
-            this.dgwProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgwProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnDelete
             // 
@@ -84,13 +84,13 @@
             // 
             // gbxUpdate
             // 
-            this.gbxUpdate.Controls.Add(this.textBox1);
+            this.gbxUpdate.Controls.Add(this.label7);
             this.gbxUpdate.Controls.Add(this.label6);
+            this.gbxUpdate.Controls.Add(this.tbxUpdateCategoryId);
             this.gbxUpdate.Controls.Add(this.tbxUpdateUnitPrice);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
-            this.gbxUpdate.Controls.Add(this.tbxUpdateStockAmount);
+            this.gbxUpdate.Controls.Add(this.tbxUpdateQuantityPerUnit);
             this.gbxUpdate.Controls.Add(this.label1);
-            this.gbxUpdate.Controls.Add(this.label2);
             this.gbxUpdate.Controls.Add(this.tbxUpdateName);
             this.gbxUpdate.Controls.Add(this.label3);
             this.gbxUpdate.Location = new System.Drawing.Point(466, 300);
@@ -102,9 +102,35 @@
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update A Product";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(81, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "QuantityPerUnit : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(81, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Category Id : ";
+            // 
+            // tbxUpdateCategoryId
+            // 
+            this.tbxUpdateCategoryId.Location = new System.Drawing.Point(203, 117);
+            this.tbxUpdateCategoryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxUpdateCategoryId.Name = "tbxUpdateCategoryId";
+            this.tbxUpdateCategoryId.Size = new System.Drawing.Size(133, 22);
+            this.tbxUpdateCategoryId.TabIndex = 9;
+            // 
             // tbxUpdateUnitPrice
             // 
-            this.tbxUpdateUnitPrice.Location = new System.Drawing.Point(189, 56);
+            this.tbxUpdateUnitPrice.Location = new System.Drawing.Point(203, 53);
             this.tbxUpdateUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateUnitPrice.Name = "tbxUpdateUnitPrice";
             this.tbxUpdateUnitPrice.Size = new System.Drawing.Size(133, 22);
@@ -112,7 +138,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(189, 166);
+            this.btnUpdate.Location = new System.Drawing.Point(203, 163);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -120,14 +146,15 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // tbxUpdateStockAmount
+            // tbxUpdateQuantityPerUnit
             // 
-            this.tbxUpdateStockAmount.Location = new System.Drawing.Point(189, 86);
-            this.tbxUpdateStockAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxUpdateStockAmount.Name = "tbxUpdateStockAmount";
-            this.tbxUpdateStockAmount.Size = new System.Drawing.Size(133, 22);
-            this.tbxUpdateStockAmount.TabIndex = 7;
+            this.tbxUpdateQuantityPerUnit.Location = new System.Drawing.Point(203, 83);
+            this.tbxUpdateQuantityPerUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxUpdateQuantityPerUnit.Name = "tbxUpdateQuantityPerUnit";
+            this.tbxUpdateQuantityPerUnit.Size = new System.Drawing.Size(133, 22);
+            this.tbxUpdateQuantityPerUnit.TabIndex = 7;
             // 
             // label1
             // 
@@ -138,18 +165,9 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Name : ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Stock Amount : ";
-            // 
             // tbxUpdateName
             // 
-            this.tbxUpdateName.Location = new System.Drawing.Point(189, 28);
+            this.tbxUpdateName.Location = new System.Drawing.Point(203, 25);
             this.tbxUpdateName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUpdateName.Name = "tbxUpdateName";
             this.tbxUpdateName.Size = new System.Drawing.Size(133, 22);
@@ -184,9 +202,43 @@
             this.gbxAdd.TabStop = false;
             this.gbxAdd.Text = "Add A Product";
             // 
+            // tbxCategoryId
+            // 
+            this.tbxCategoryId.Location = new System.Drawing.Point(195, 126);
+            this.tbxCategoryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxCategoryId.Name = "tbxCategoryId";
+            this.tbxCategoryId.Size = new System.Drawing.Size(133, 22);
+            this.tbxCategoryId.TabIndex = 11;
+            // 
+            // lblCategoryId
+            // 
+            this.lblCategoryId.AutoSize = true;
+            this.lblCategoryId.Location = new System.Drawing.Point(80, 132);
+            this.lblCategoryId.Name = "lblCategoryId";
+            this.lblCategoryId.Size = new System.Drawing.Size(85, 16);
+            this.lblCategoryId.TabIndex = 10;
+            this.lblCategoryId.Text = "Category Id : ";
+            // 
+            // tbxQuantityPerUnit
+            // 
+            this.tbxQuantityPerUnit.Location = new System.Drawing.Point(196, 92);
+            this.tbxQuantityPerUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxQuantityPerUnit.Name = "tbxQuantityPerUnit";
+            this.tbxQuantityPerUnit.Size = new System.Drawing.Size(133, 22);
+            this.tbxQuantityPerUnit.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(81, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "QuantityPerUnit : ";
+            // 
             // tbxUnitPrice
             // 
-            this.tbxUnitPrice.Location = new System.Drawing.Point(188, 61);
+            this.tbxUnitPrice.Location = new System.Drawing.Point(195, 61);
             this.tbxUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUnitPrice.Name = "tbxUnitPrice";
             this.tbxUnitPrice.Size = new System.Drawing.Size(133, 22);
@@ -194,7 +246,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(189, 166);
+            this.btnAdd.Location = new System.Drawing.Point(196, 166);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(133, 30);
@@ -214,7 +266,7 @@
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(188, 25);
+            this.tbxName.Location = new System.Drawing.Point(195, 25);
             this.tbxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(133, 22);
@@ -276,57 +328,6 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Products : ";
             // 
-            // tbxQuantityPerUnit
-            // 
-            this.tbxQuantityPerUnit.Location = new System.Drawing.Point(189, 92);
-            this.tbxQuantityPerUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxQuantityPerUnit.Name = "tbxQuantityPerUnit";
-            this.tbxQuantityPerUnit.Size = new System.Drawing.Size(133, 22);
-            this.tbxQuantityPerUnit.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "QuantityPerUnit : ";
-            // 
-            // tbxCategoryId
-            // 
-            this.tbxCategoryId.Location = new System.Drawing.Point(188, 126);
-            this.tbxCategoryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxCategoryId.Name = "tbxCategoryId";
-            this.tbxCategoryId.Size = new System.Drawing.Size(133, 22);
-            this.tbxCategoryId.TabIndex = 11;
-            // 
-            // lblCategoryId
-            // 
-            this.lblCategoryId.AutoSize = true;
-            this.lblCategoryId.Location = new System.Drawing.Point(80, 132);
-            this.lblCategoryId.Name = "lblCategoryId";
-            this.lblCategoryId.Size = new System.Drawing.Size(85, 16);
-            this.lblCategoryId.TabIndex = 10;
-            this.lblCategoryId.Text = "Category Id : ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(189, 120);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 22);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Stock Amount : ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,9 +362,8 @@
         private System.Windows.Forms.GroupBox gbxUpdate;
         private System.Windows.Forms.TextBox tbxUpdateUnitPrice;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox tbxUpdateStockAmount;
+        private System.Windows.Forms.TextBox tbxUpdateQuantityPerUnit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbxUpdateName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox gbxAdd;
@@ -381,7 +381,8 @@
         private System.Windows.Forms.Label lblCategoryId;
         private System.Windows.Forms.TextBox tbxQuantityPerUnit;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxUpdateCategoryId;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
     }
 }
