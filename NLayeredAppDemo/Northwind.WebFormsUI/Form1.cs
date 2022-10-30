@@ -1,5 +1,6 @@
 ﻿using Northwind.Business.Abstract;
 using Northwind.Business.Concrete;
+using Northwind.Business.DependencyResolvers.Ninject.InstanceFactory;
 using Northwind.Entities.Concrete;
 using Nothwind.DataAccess.Abstract;
 using Nothwind.DataAccess.Concrete.EntityFramework;
@@ -21,13 +22,13 @@ namespace Northwind.WebFormsUI
         public Form1()
         {
             InitializeComponent();
-
-            _productService = new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
-
+            //ninject came...
+            //_productService = new ProductManager(new EfProductDal());
+            //_categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
 
- 
         private IProductService _productService;
         private ICategoryService _categoryService;
 
@@ -78,32 +79,54 @@ namespace Northwind.WebFormsUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            _productService.Add(new Product
+            try
             {
-                ProductName = tbxName.Text,
-                UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
-                CategoryId = Convert.ToInt32(tbxCategoryId.Text),
-                QuantityPerUnit = tbxQuantityPerUnit.Text,
+                _productService.Add(new Product
+                {
+                    ProductName = tbxName.Text,
+                    UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
+                    CategoryId = Convert.ToInt32(tbxCategoryId.Text),
+                    QuantityPerUnit = tbxQuantityPerUnit.Text,
 
-            });
-            MessageBox.Show(" Product is added... ");
-            LoadProducts();
+                });
+                MessageBox.Show(" Product is added... ");
+                LoadProducts();
 
-            tbxName.Text = "";
-            tbxUnitPrice.Text = "";
-            tbxCategoryId.Text = "";
-            tbxQuantityPerUnit.Text = "";
+                tbxName.Text = "";
+                tbxUnitPrice.Text = "";
+                tbxCategoryId.Text = "";
+                tbxQuantityPerUnit.Text = "";
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+
+            
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            _productService.Delete(new Product
+            if (dgwProduct.CurrentRow != null)
             {
-                ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value)
-            });
-            MessageBox.Show("Product deleted...");
-            LoadProducts();
+                try
+                {
+                    _productService.Delete(new Product
+                    {
+                        ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value)
+                    });
+                    MessageBox.Show("Product deleted...");
+                    LoadProducts();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+
+            }
+
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

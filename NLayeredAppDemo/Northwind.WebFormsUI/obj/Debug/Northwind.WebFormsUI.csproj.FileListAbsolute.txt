@@ -46,3 +46,10 @@ D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI
 D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.csproj.CopyComplete
 D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.exe
 D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.pdb
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\FluentValidation.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\Northwind.Business.dll.config
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\FluentValidation.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\myRepo\CsharpNLayeredProject\NLayeredApp\NLayeredAppDemo\Northwind.WebFormsUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
